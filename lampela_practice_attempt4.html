@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Accessibility Practice Webpage</title>
+  <style>
+    body {
+      background-color: #f0f8ff;
+      font-family: Arial, sans-serif;
+    }
+    p.custom-font {
+      font-family: 'Courier New', monospace;
+    }
+    a:hover {
+      color: red;
+    }
+    a:focus {
+      outline: 2px solid blue;
+    }
+    table {
+      border-collapse: collapse;
+      width: 50%;
+      margin-top: 20px;
+    }
+    table, th, td {
+      border: 1px solid black;
+    }
+    th {
+      background-color: #d3d3d3;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Skip Navigation -->
+  <a href="#main" style="position:absolute; left:-1000px; top:auto; width:1px; height:1px; overflow:hidden;">Skip to content</a>
+
+  <h1>Welcome to My Practice Webpage</h1>
+
+  <h2>Introduction</h2>
+  <p>gLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor eu lectus id ultricies. Nunc ultrices varius leo id sollicitudin. Aliquam sit amet risus velit. Phasellus porta quis enim quis finibus. Cras malesuada eleifend laoreet. Phasellus ultricies ullamcorper lectus, vel rutrum felis consequat a. Praesent pellentesque est arcu, in sagittis purus blandit sed. Suspendisse congue imperdiet diam, sed fringilla elit suscipit sit amet. Nam at facilisis felis.</p>
+  <p class="custom-font">Suspendisse consectetur ac odio non porttitor. Ut et faucibus nibh, non sagittis tellus. Integer varius porttitor egestas. Integer sodales quam lacus, fringilla consequat mauris egestas quis. In pretium dui consectetur dui bibendum pretium quis eget urna. Vestibulum sapien nisi, maximus non dui eu, pulvinar congue mauris. Donec non ex sed est condimentum molestie nec et ipsum. Morbi eu congue purus, non tristique erat. Proin nec quam efficitur, dignissim leo vitae, vehicula tortor. Morbi tincidunt tempus lectus, feugiat venenatis augue tempor sit amet. Fusce arcu neque, placerat at dui eu, volutpat tempus purus. Phasellus vel lacus ac nisi pretium porttitor. In tincidunt quis lorem vel condimentum. Phasellus varius sapien in eleifend tempor.</p>
+  <p>Learning <strong>HTML</strong> and <em>CSS</em> is essential for making great e-learnings. Water is H<sub>2</sub>O and Einstein’s equation is E = mc<sup>2</sup>.</p>
+
+  <h2>Lists and Links</h2>
+  <ul>
+    <li>School</li>
+    <li>Work</li>
+    <li>Gym</li>
+  </ul>
+
+  <ol>
+    <li>dog</li>
+    <li>cat</li>
+    <li>fish</li>
+  </ol>
+
+  <p>Visit <a href="https://www.w3schools.com" target="_blank">W3Schools</a> for tutorials... IT HELPS!</p>
+
+  <!-- Simple Image -->
+  <img src="catsforwebpage_2.jpg" alt="group of cats sitting together" style="width:300px;height:auto;">
+
+  <!-- Complex Image with ARIA long description -->
+  <figure>
+    <img src="catsforwebpage_1.jpg" alt="Large group of lazy cats" aria-describedby="complexDesc">
+    <figcaption id="complexDesc">A group of colored cats sitting together.</figcaption>
+  </figure>
+
+  <!-- Main Content Anchor for Skip Link -->
+  <div id="main">
+    <h2>Data Table Example</h2>
+    <table>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">City</th>
+      </tr>
+      <tr>
+        <td>Alice</td>
+        <td>24</td>
+        <td>New York</td>
+      </tr>
+      <tr>
+        <td>Bob</td>
+        <td>30</td>
+        <td>Chicago</td>
+      </tr>
+      <tr>
+        <td>Charlie</td>
+        <td>28</td>
+        <td>Los Angeles</td>
+      </tr>
+    </table>
+
+    <h2>Form Elements</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name"><br><br>
+
+      <label>Gender:</label>
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Female</label><br><br>
+
+      <label for="subscribe">Subscribe to newsletter</label>
+      <input type="checkbox" id="subscribe" name="subscribe"><br><br>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+</body>
+</html>
